@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio | Nicolas Ramos</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Font Awesome para iconos -->
+    <script src="https://kit.fontawesome.com/21a4ae4e0a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Nicolas Ramos</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Inicio/Hero -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Hola, soy <span class="highlight">Nicolas Ramos</span></h1>
+            <p class="animate-text">Desarrollador Web | Diseñador | Creativo</p>
+            <a href="#proyectos" class="btn">Ver Proyectos</a>
+        </div>
+    </section>
+
+    <!-- Sección Sobre Mí -->
+    <section id="sobre-mi" class="about">
+        <h2>Sobre Mí</h2>
+        <div class="about-content">
+            <div class="about-img">
+                <img src= "nicolasramos.jpg" alt="mi foto">
+            </div>
+            <div class="about-text">
+                <p>Soy un desarrollador web apasionado por crear experiencias digitales únicas y funcionales. Con experiencia en desarrollo frontend y backend, me especializo en convertir ideas en realidad a través del código.</p>
+                <p>Me encanta aprender nuevas tecnologías y enfrentar desafíos que me permitan crecer profesionalmente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Proyectos -->
+    <section id="proyectos" class="projects">
+        <h2>Mis Proyectos</h2>
+        <div class="projects-grid" id="projects-container">
+            <!-- Los proyectos se cargarán dinámicamente con JavaScript -->
+        </div>
+    </section>
+
+    <!-- Sección Habilidades -->
+    <section id="habilidades" class="skills">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill-item">
+                <i class="fab fa-html5"></i>
+                <span>HTML5</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-css3-alt"></i>
+                <span>CSS3</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-react"></i>
+                <span>React</span>
+            </div>
+            <div class="skill-item">
+                <i class="fab fa-node"></i>
+                <span>Node.js</span>
+            </div>
+            <div class="skill-item">
+                <i class="fas fa-database"></i>
+                <span>MariaDB</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Contacto -->
+    <section id="contacto" class="contact">
+        <h2>Contacto</h2>
+        <div class="contact-container">
+            <form id="contact-form">
+    <input type="text" name="nombre" placeholder="Nombre" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
+    <button type="submit" class="btn">Enviar Mensaje</button>
+</form>
+            <div class="social-links">
+                <a href="#" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
