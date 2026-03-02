@@ -1,29 +1,24 @@
-// Datos de proyectos
 const projects = [
     {
-        title: "E commerce Jap",
-        description: "Este es un proyecto en el cual trabajé mientras estudiaba con unos compañeros, el cual se trata de un e-commerce con diferentes productos , el cual, si se quiere ver, primero que nada hay que lanzar el server y una vez lanzado, el usuario es admin@admin y la contraseña es 1234.",
-        image: "eccomerce.png",
-        demo: "#",
-        code: "#"
+        title: "Ecommerce Jap",
+        description: "E-commerce Jóvenes a Programar es una tienda online desarrollada como proyecto académico, que simula un sistema de comercio electrónico permitiendo visualizar productos, navegar por categorías y practicar funcionalidades clave del desarrollo web front-end. el usuario es admin@admin y la contraseña es 1234.",
+        image: "ecommerce.png",
+        code: "https://github.com/NicolasRamosDamiano/proyecto-final"
     },
     {
-        title: "Proyecto 2",
-        description: "Este segundo proyecto en realidad es un repositorio en el cual se acumulan un montón de diferentes aplicaciones, páginas, servicios que pueden ser de gran ayuda para un desarrollador y para cualquier otro tipo de trabajo en IT. Ahí se enlistan diferentes páginas que fui conociendo y otras que fui investigando. La idea era practicar más que nada justamente la parte del CSS, por eso tiene más efectos y no trabajé tanto en la parte de hacer un backend con una base de datos.",
-        image: "piratebay.png",
-        demo: "#",
-        code: "#"
+        title: "CodeHub",
+        description: "CodeHub es una plataforma que recopila y organiza herramientas y recursos útiles para desarrolladores web, facilitando el acceso a páginas que ayudan a resolver problemas, optimizar el trabajo y mejorar la productividad.",
+        image: "codehub.png",
+        code: "https://github.com/NicolasRamosDamiano/primerapagina"
     },
     {
         title: "Proyecto 3",
         description: "Descripción breve del proyecto 3",
-        image: "https://via.placeholder.com/300x200",
-        demo: "#",
+        image: "",
         code: "#"
     }
 ];
 
-// Cargar proyectos dinámicamente
 function loadProjects() {
     const container = document.getElementById('projects-container');
     
@@ -37,7 +32,6 @@ function loadProjects() {
                 <h3>${project.title}</h3>
                 <p>${project.description}</p>
                 <div class="project-links">
-                    <a href="${project.demo}" target="_blank">Demo</a>
                     <a href="${project.code}" target="_blank">Código</a>
                 </div>
             </div>
@@ -47,7 +41,7 @@ function loadProjects() {
     });
 }
 
-// Menú móvil
+
 function initMobileMenu() {
     const menuBtn = document.querySelector('.menu-btn');
     const navLinks = document.querySelector('.nav-links');
@@ -57,7 +51,6 @@ function initMobileMenu() {
     });
 }
 
-// Navegación suave
 function initSmoothScroll() {
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -68,14 +61,13 @@ function initSmoothScroll() {
                     behavior: 'smooth',
                     block: 'start'
                 });
-                // Cerrar menú móvil si está abierto
                 document.querySelector('.nav-links').classList.remove('active');
             }
         });
     });
 }
 
-// Formulario de contacto
+
 function initContactForm() {
     const form = document.getElementById('contact-form');
 
@@ -107,7 +99,7 @@ function initContactForm() {
     });
 }
 
-// Animaciones al hacer scroll
+
 function initScrollAnimations() {
     const sections = document.querySelectorAll('section');
     
@@ -128,7 +120,6 @@ function initScrollAnimations() {
     });
 }
 
-// Inicializar todo cuando el DOM esté listo
 document.addEventListener('DOMContentLoaded', () => {
     loadProjects();
     initMobileMenu();
