@@ -3,20 +3,38 @@ const projects = [
         title: "Ecommerce Jap",
         description: "E-commerce Jóvenes a Programar es una tienda online desarrollada como proyecto académico, que simula un sistema de comercio electrónico permitiendo visualizar productos, navegar por categorías y practicar funcionalidades clave del desarrollo web front-end. el usuario es admin@admin y la contraseña es 1234.",
         image: "ecommerce.png",
-        code: "https://github.com/NicolasRamosDamiano/proyecto-final"
+        code: "https://github.com/NicolasRamosDamiano/proyecto-final",
+        pagina: "https://nicolasramosdamiano.github.io/proyecto-final/login.html",
+        iconos: [
+    { icon: "fa-brands fa-html5", nombre: "HTML5" },
+    { icon: "fa-brands fa-css3-alt", nombre: "CSS3" },
+    { icon: "fa-brands fa-js", nombre: "JavaScript" },
+    { icon: "fa-brands fa-bootstrap", nombre: "Bootstrap" }
+]
     },
     {
         title: "CodeHub",
         description: "CodeHub es una plataforma que recopila y organiza herramientas y recursos útiles para desarrolladores web, facilitando el acceso a páginas que ayudan a resolver problemas, optimizar el trabajo y mejorar la productividad.",
         image: "codehub.png",
-        code: "https://github.com/NicolasRamosDamiano/primerapagina"
+        code: "https://github.com/NicolasRamosDamiano/codehub",
+        pagina: "https://nicolasramosdamiano.github.io/codehub/",
+        iconos:[{ icon: "fa-brands fa-html5", nombre: "HTML5" },
+        { icon: "fa-brands fa-css3-alt", nombre: "CSS3" },
+        { icon: "fa-brands fa-js", nombre: "JavaScript" },
+        { icon: "fa-brands fa-react", nombre: "React" }]
     },
-    {
-        title: "Proyecto 3",
-        description: "Descripción breve del proyecto 3",
-        image: "",
-        code: "#"
-    }
+{
+    title: "PorteX",
+    description: "Portex es una aplicación web desarrollada con Vue para una empresa española dedicada a portes y mudanzas. Su objetivo es facilitar la gestión y planificación de traslados. La plataforma permite calcular la distancia entre direcciones para estimar recorridos y organizar los servicios de transporte de forma más eficiente. Además, incorpora un sistema de seguimiento mediante un mapa, donde se puede visualizar el recorrido y la ubicación del traslado.",
+    image: "portex.png",
+    code: "https://github.com/DrAsHMkR/PortexApp",
+    pagina: "https://nicolasramosdamiano.github.io/portex/",
+    iconos: [
+        { icon: "fa-brands fa-vuejs", nombre: "Vue.js" },
+        { icon: "fa-brands fa-js", nombre: "JavaScript" },
+        { icon: "fa-brands fa-css3-alt", nombre: "CSS3" }
+    ]
+}
 ];
 
 function loadProjects() {
@@ -30,9 +48,14 @@ function loadProjects() {
             <img src="${project.image}" alt="${project.title}">
             <div class="project-info">
                 <h3>${project.title}</h3>
-                <p>${project.description}</p>
+                <p class="project-description">${project.description}</p>
+                <button class="ver-mas">Ver más</button>
                 <div class="project-links">
                     <a href="${project.code}" target="_blank">Código</a>
+                    <a href="${project.pagina}" target="_blank">Página</a>
+                </div>
+                <div class="project-icons">
+                 ${project.iconos.map(i => `<i class="${i.icon}" title="${i.nombre}"></i>`).join('')}
                 </div>
             </div>
         `;
@@ -126,6 +149,13 @@ document.addEventListener('DOMContentLoaded', () => {
     initSmoothScroll();
     initContactForm();
     initScrollAnimations();
+
+    document.querySelectorAll('.ver-mas').forEach(boton => {
+    boton.addEventListener('click', () => {
+        const descripcion = boton.previousElementSibling;
+        descripcion.classList.toggle('visible');
+    });
+});
 });
 
 // Cambiar estilo de navbar al hacer scroll
@@ -139,3 +169,4 @@ window.addEventListener('scroll', () => {
         navbar.style.backdropFilter = 'none';
     }
 });
+
